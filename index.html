@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelorama</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <h1>MODELORAMA</h1>
+
+  <button class="menu-btn" onclick="abrirMenu()">☰</button>
+
+  <nav id="menu">
+    <button class="close-btn" onclick="cerrarMenu()">✖</button>
+
+    <a href="#inicio" onclick="cerrarMenu()">Inicio</a>
+    <a href="#catalogo" onclick="cerrarMenu()">Catálogo</a>
+    <a href="#nosotros" onclick="cerrarMenu()">Nosotros</a>
+    <a href="#sucursales" onclick="cerrarMenu()">Sucursales</a>
+    <a href="#contacto" onclick="cerrarMenu()">Contacto</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <img src="100años.jpg" class="hero-img">
+  <br></br>
+  <br></br>
+  <div class="hero-text">
+    <h2>100 años compartiendo momentos contigo</h2>
+    
+  </div>
+</section>
+
+<main>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="section nosotros">
+  <h2>ACERCA DE NOSOTROS</h2>
+
+  <div class="nosotros-container">
+
+    <div class="nosotros-logo">
+      <img src="grupo.png">
+    </div>
+
+    <div class="nosotros-texto">
+      <p>
+        Grupo Modelo, fundado en 1925 y parte de AB InBev desde 2013, es el líder cervecero en México con marcas icónicas como Corona y Modelo.
+      </p>
+      <p>
+        Modelorama es su cadena de retail minorista, con más de 10,000 unidades operadas principalmente bajo franquicias.
+      </p>
+      <p>
+        <strong>Modelo de Negocio:</strong> Red de franquicias con estructura lista para operar.
+      </p>
+      <p>
+        <strong>Presencia:</strong> Representa cerca del 15% de las ventas totales del grupo.
+      </p>
+      <p>
+        <strong>Innovación:</strong> Modelorama Now entrega en menos de 45 minutos.
+      </p>
+      <p>
+        <strong>Diferencia:</strong> Imagen y promociones estandarizadas.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CATALOGO -->
+<section id="catalogo" class="section">
+  <h2>CATÁLOGO</h2>
+
+  <div class="grid catalogo">
+    <div class="card"><img src="modelo-negra.jpg"><p>Modelo Negra</p></div>
+    <div class="card"><img src="corona.jpg"><p>Corona</p></div>
+    <div class="card"><img src="modelo.jpg"><p>Modelo</p></div>
+    <div class="card"><img src="victoria.jpg"><p>Victoria</p></div>
+    <div class="card"><img src="pacifico.jpg"><p>Pacífico</p></div>
+    <div class="card"><img src="leon.jpg"><p>León</p></div>
+  </div>
+</section>
+
+<!-- SUCURSAL -->
+<section id="sucursales" class="section">
+  <h2>SUCURSALES</h2>
+
+  <div class="mapa">
+    <a href="https://www.google.com/maps/search/Modelorama/@20.745411,-103.4354688,14744m/data=!3m2!1e3!4b1?entry=ttu" target="_blank">
+      <img src="mapa.jpg">
+    </a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contacto">
+  <h2>CONTACTO</h2>
+
+  <p>Tel: 33 1234 5678</p>
+  <p>Email: hola@modelorama.mx</p>
+
+  <!-- REDES TIPO DROPDOWN -->
+<div class="redes-dropdown">
+
+  <div class="dropdown">
+    Facebook
+    <div class="dropdown-content">
+      <a href="https://www.facebook.com/grupomodelomex/" target="_blank">
+        <img src="facebook.png" alt="Facebook">
+      </a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    Instagram
+    <div class="dropdown-content">
+      <a href="https://www.instagram.com/grupomodelomx?igsh=MW9ldDZ2aWgwY291eQ==" target="_blank">
+        <img src="instagram.jpg" alt="Instagram">
+      </a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    Twitter
+    <div class="dropdown-content">
+      <a href="https://x.com/grupomodelo_mx?s=21" target="_blank">
+        <img src="twitter.png" alt="Twitter">
+      </a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© 2026 Modelorama ®</p>
+</footer>
+
+<script>
+function abrirMenu(){
+  document.getElementById("menu").classList.add("activo");
+  document.body.classList.add("menu-abierto");
+}
+
+function cerrarMenu(){
+  document.getElementById("menu").classList.remove("activo");
+  document.body.classList.remove("menu-abierto");
+}
+</script>
+
+</body>
+</html>

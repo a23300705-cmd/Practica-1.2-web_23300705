@@ -1,0 +1,281 @@
+:root{
+  --azul:#1A2744;
+  --azul-oscuro:#031441;
+  --crema:#f5f0e8;
+  --amarillo:#f7e7a9;
+}
+
+/* BASE */
+body{
+  margin:0;
+  font-family:Arial;
+  background:var(--crema);
+}
+
+/* HEADER */
+.topbar{
+  background:var(--azul);
+  color:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+#menu{
+  display:flex;
+  gap:15px;
+}
+
+#menu a{
+  color:white;
+  text-decoration:none;
+}
+
+/* BOTONES */
+.menu-btn{
+  display:none;
+  font-size:25px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.close-btn{
+  display:none;
+  background:none;
+  border:none;
+  color:white;
+  font-size:20px;
+  margin:10px;
+  cursor:pointer;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+}
+
+.hero-img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+}
+
+.hero-text{
+  position:absolute;
+  bottom:20px;
+  width:100%;
+  text-align:center;
+  color:white;
+  font-size:22px;
+}
+
+/* SECCIONES */
+.section{
+  padding:40px;
+  text-align:center;
+}
+
+h2{
+  color:rgb(184, 160, 23);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  gap:15px;
+}
+
+.catalogo{
+  grid-template-columns:repeat(3,1fr);
+}
+
+.card{
+  background:var(--amarillo);
+  padding:10px;
+  border-radius:10px;
+}
+
+.card img{
+  width:100%;
+  height:120px;
+  object-fit:contain;
+}
+
+/* NOSOTROS */
+.nosotros-container{
+  display:flex;
+  gap:30px;
+  justify-content:center;
+  align-items:center;
+}
+
+.nosotros-logo img{
+  width:200px;
+  border-radius:50%;
+}
+
+.nosotros-texto{
+  background:#2a9dad;
+  color:white;
+  padding:20px;
+  border-radius:10px;
+  max-width:500px;
+  text-align:left;
+}
+
+/* MAPA */
+.mapa img{
+  width:300px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* CONTACTO */
+.contacto{
+  background:var(--azul);
+  color:white;
+}
+
+.redes img{
+  width:40px;
+  margin:10px;
+}
+
+/* FOOTER */
+.footer{
+  background:var(--azul-oscuro);
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* TABLET */
+/* TABLET SOLO */
+@media(min-width:601px) and (max-width:900px){
+
+  .catalogo{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .nosotros-container{
+    flex-direction:column;
+  }
+
+  #menu{
+    position:fixed;
+    left:0;
+    top:0;
+    width:220px;
+    height:100%;
+    background:var(--azul);
+    flex-direction:column;
+    padding-top:60px;
+    transform:none;
+  }
+
+  body{
+    margin-left:220px;
+  }
+
+  .menu-btn{
+    display:none;
+  }
+
+  .close-btn{
+    display:none;
+  }
+
+}
+
+/* CELULAR */
+/* CELULAR */
+@media(max-width:600px){
+
+  .catalogo{
+    grid-template-columns:1fr;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  /* 🔥 OCULTAR menú por defecto */
+  #menu{
+    display:none;
+    position:fixed;
+    top:0;
+    right:0;
+    width:220px;
+    height:100%;
+    background:var(--azul);
+    flex-direction:column;
+    padding-top:60px;
+    z-index:1000;
+  }
+
+  /* 🔥 CUANDO SE ABRE */
+  #menu.activo{
+    display:flex;
+  }
+
+  /* BOTON X visible */
+  .close-btn{
+    display:block;
+    align-self:flex-end;
+    margin:10px;
+  }
+
+  /* QUITAR menú normal de arriba */
+  .topbar{
+    position:relative;
+  }
+
+  #menu a{
+    padding:15px;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+  }
+
+  .hero-img{
+    height:250px;
+  }
+}body.menu-abierto{
+  overflow:hidden;
+}
+/* REDES DROPDOWN */
+.redes-dropdown{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+
+.dropdown{
+  position:relative;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.dropdown-content{
+  display:none;
+  position:absolute;
+  top:30px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content{
+  display:block;
+}
+
+.dropdown img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
