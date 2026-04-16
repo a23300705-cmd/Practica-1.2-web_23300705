@@ -201,8 +201,9 @@ h2{
   .menu-btn{
     display:block;
   }
-
-  /* 🔥 OCULTAR menú por defecto */
+.nosotros-container{
+    flex-direction:column;
+  }
   #menu{
     display:none;
     position:fixed;
@@ -216,19 +217,19 @@ h2{
     z-index:1000;
   }
 
-  /* 🔥 CUANDO SE ABRE */
+ 
   #menu.activo{
     display:flex;
   }
 
-  /* BOTON X visible */
+ 
   .close-btn{
     display:block;
     align-self:flex-end;
     margin:10px;
   }
 
-  /* QUITAR menú normal de arriba */
+ 
   .topbar{
     position:relative;
   }
